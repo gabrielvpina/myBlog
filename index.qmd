@@ -25,10 +25,13 @@ PhD Student in Genetics and Molecular Biology, with an emphasis on Bioinformatic
 ## Education
 
 Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA
-PhD in Genetics and Molecular Biology
+MSc. in Genetics and Molecular Biology
+
+Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA
+Bachelor in Interdisciplinary Sciences
 
 ## Experience
 
-Plant Genomics and Transcriptomics - 2023-2024
+**Hard Skills:** Python | R | Bash | Linux | Conda and Bioconda | Docker | Quarto | Shiny
 
-Plant and Arthropod Virology - 2024 till now
+**Know-How**: Biostatistics | NGS Data | Pipeline Devlopment | Differential Gene Expression | Dashboards | Biological Databases
