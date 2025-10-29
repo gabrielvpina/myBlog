@@ -3,12 +3,14 @@ project:
   output-dir: docs
 
 website:
-  title: "gabrielvpina"
+  title: "Gabriel Rodrigues"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - education.qmd
+
 
 format:
   html:

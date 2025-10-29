@@ -18,8 +18,6 @@ about:
       href: https://github.com/gabrielvpina
 ---
 
-:::{#hero-heading}
-
 # Bio
 
 PhD Student in Genetics and Molecular Biology, with an emphasis on Bioinformatics. I am currently developing pipelines for RNAseq data to study plant innate immune systems and viral diversity from RNA samples.
@@ -34,5 +32,3 @@ PhD in Genetics and Molecular Biology
 Plant Genomics and Transcriptomics - 2023-2024
 
 Plant and Arthropod Virology - 2024 till now
-
-:::
