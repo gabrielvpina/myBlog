@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "production.html",
+    "href": "production.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Preprints\n\nViralQuest: A user-friendly interactive pipeline for viral-sequences analysis and curation\n2025-08-12 | Preprint\nDOI: 10.1101/2025.08.10.669577\nContributors: Gabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar\n\n\n\nPublished works\n\nInsights into miRNAs of the Stingless Bee Melipona quadrifasciata\nNon-Coding RNA\n2025-06-19 | Journal article\nDOI: 10.3390/ncrna11030048\nContributors: Dalliane Oliveira Soares; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição; Tatyana Chagas Moura; Isaque João da Silva de Faria; Roenick Proveti Olmo; Weyder Cristiano Santana et al.\n\n\nTheobroma cacao Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance\nViruses\n2025-04 | Journal article | Author\nDOI: 10.3390/v17050624\nContributors: Gabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães Rocha Aguiar\n\n\nPolymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae\nJournal of Medical Microbiology\n2024-09-18 | Journal article\nDOI: 10.1099/jmm.0.001891\nContributors: Andressa Leite Ferraz de Melo; Luana Rossato; Jannaína Velasques; Virginia Lopes de Sousa; Gabriel Victor Pina Rodrigues; Cláudia Andrea Lima Cardoso; Julia Pimentel Arantes; Bruno Fernandes Lima; Simone Simionatto\n\n\nThe Virome of Cocoa Fermentation-Associated Microorganisms\nViruses\n2024-07-31 | Journal article\nDOI: 10.3390/v16081226\nContributors: João Pedro Nunes Santos; Gabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno Santos Florêncio; Aijalon Brito da Silva Junior; Paulo Eduardo Ambrósio; Carlos Priminho Pirovani et al."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Gabriel Rodrigues",
@@ -25,40 +32,26 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "PhD Student in Genetics and Molecular Biology, with an emphasis on Bioinformatics. I am currently developing pipelines for RNAseq data to study plant innate immune systems and viral diversity from RNA samples."
+    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\n\nWorking with ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. For more info check the GitHub repository."
   },
   {
-    "objectID": "education.html",
-    "href": "education.html",
-    "title": "Education",
+    "objectID": "about.html#phd-2025---current-time",
+    "href": "about.html#phd-2025---current-time",
+    "title": "About",
     "section": "",
     "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\n\nWorking with ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. For more info check the GitHub repository."
   },
   {
-    "objectID": "education.html#phd-2025---current-time",
-    "href": "education.html#phd-2025---current-time",
-    "title": "Education",
-    "section": "",
-    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\n\nWorking with ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. For more info check the GitHub repository."
-  },
-  {
-    "objectID": "education.html#masters-degree-2023---2025",
-    "href": "education.html#masters-degree-2023---2025",
-    "title": "Education",
+    "objectID": "about.html#masters-degree-2023---2025",
+    "href": "about.html#masters-degree-2023---2025",
+    "title": "About",
     "section": "Master’s Degree (2023 - 2025)",
     "text": "Master’s Degree (2023 - 2025)\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\n\nHas experience and published works with viral genomic survillance in Theobroma cacao public data to screening new viral putative sequences in RNA-Seq libraries in public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq public data to screen expressed genes in different tissues, genotypes and condition (inoculated with P. megakarya) and performs differential gene expression analysis between these groups."
   },
   {
-    "objectID": "education.html#bachelors-degree",
-    "href": "education.html#bachelors-degree",
-    "title": "Education",
-    "section": "Bachelor’s Degree",
-    "text": "Bachelor’s Degree\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\n\nWorked with chemodiversity of the native populations of Atlantic forest plant Schinus terebinthifolia Raddi."
-  },
-  {
-    "objectID": "education.html#bachelors-degree-2018---2022",
-    "href": "education.html#bachelors-degree-2018---2022",
-    "title": "Education",
+    "objectID": "about.html#bachelors-degree-2018---2022",
+    "href": "about.html#bachelors-degree-2018---2022",
+    "title": "About",
     "section": "Bachelor’s Degree (2018 - 2022)",
     "text": "Bachelor’s Degree (2018 - 2022)\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\n\nWorked with chemodiversity of the native populations of Atlantic forest plant Schinus terebinthifolia Raddi."
   }

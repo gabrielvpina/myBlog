@@ -1,0 +1,56 @@
+---
+title: "Publications"
+toc: false
+---
+
+# Preprints 
+
+### ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis and curation
+
+2025-08-12 | **Preprint** 
+
+DOI: [10.1101/2025.08.10.669577](https://doi.org/10.1101/2025.08.10.669577)
+
+Contributors: **Gabriel Victor Pina Rodrigues**; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar 
+
+# Published works
+
+### Insights into miRNAs of the Stingless Bee *Melipona quadrifasciata*
+
+**Non-Coding RNA** 
+
+2025-06-19 | Journal article 
+
+DOI: [10.3390/ncrna11030048](https://doi.org/10.3390/ncrna11030048)
+
+Contributors: Dalliane Oliveira Soares; Lucas Yago Melo Ferreira; **Gabriel Victor Pina Rodrigues**; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição; Tatyana Chagas Moura; Isaque João da Silva de Faria; Roenick Proveti Olmo; Weyder Cristiano Santana *et al.*
+
+### *Theobroma cacao* Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance
+
+**Viruses**
+
+2025-04 | Journal article | Author
+
+DOI: [10.3390/v17050624](https://www.mdpi.com/1999-4915/17/5/624)
+
+Contributors: **Gabriel Victor Pina Rodrigues**; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães Rocha Aguiar 
+
+### Polymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae
+
+**Journal of Medical Microbiology**
+
+2024-09-18 | Journal article
+
+DOI: 10.1099/jmm.0.001891
+
+Contributors: Andressa Leite Ferraz de Melo; Luana Rossato; Jannaína Velasques; Virginia Lopes de Sousa; **Gabriel Victor Pina Rodrigues**; Cláudia Andrea Lima Cardoso; Julia Pimentel Arantes; Bruno Fernandes Lima; Simone Simionatto
+
+### The Virome of Cocoa Fermentation-Associated Microorganisms
+
+**Viruses**
+
+2024-07-31 | Journal article
+
+DOI: [10.3390/v16081226](https://doi.org/10.3390/v16081226)
+
+Contributors: João Pedro Nunes Santos; **Gabriel Victor Pina Rodrigues**; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno Santos Florêncio; Aijalon Brito da Silva Junior; Paulo Eduardo Ambrósio; Carlos Priminho Pirovani et al.
