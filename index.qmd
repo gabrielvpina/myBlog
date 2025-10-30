@@ -10,12 +10,15 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/gabriel-rodrigues-008419210/
+
     - icon: twitter
       text: twitter
       href: https://twitter.com/gabrielvpina
+
     - icon: github
       text: Github
       href: https://github.com/gabrielvpina
+      
     - icon: orcid
       text: ORCID
       href: https://orcid.org/0009-0005-2294-2845
