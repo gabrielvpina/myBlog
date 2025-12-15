@@ -1,0 +1,9 @@
+---
+title: "Posts"
+
+listing:
+  type: grid
+  fields: [image, date, title, description, categories, author]
+  contents:
+    - "posts/seq_sanger/*.qmd"
+---

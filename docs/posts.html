@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Gabriel Rodrigues</title>
+<title>Posts – Gabriel Rodrigues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -68,12 +70,70 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -97,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -105,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link active" href="./posts.html" aria-current="page"> 
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
@@ -134,13 +194,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Posts</h1>
 </div>
 
 
@@ -157,35 +219,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="phd-2025---current-time" class="level2">
-<h2 class="anchored" data-anchor-id="phd-2025---current-time">PhD (2025 - Current time)</h2>
-<p><strong>Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA</strong></p>
-<p><em>PhD in Genetics and Molecular Biology</em></p>
-<ul>
-<li>Working with <em>ViralQuest</em> pipeline, a tool designed to characterize viral sequences in contigs samples. For more info <a href="https://github.com/gabrielvpina/viralquest">check the GitHub repository.</a></li>
-</ul>
-</section>
-<section id="masters-degree-2023---2025" class="level2">
-<h2 class="anchored" data-anchor-id="masters-degree-2023---2025">Master’s Degree (2023 - 2025)</h2>
-<p><strong>Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA</strong></p>
-<p><em>MSc. in Genetics and Molecular Biology</em></p>
-<ul>
-<li><p>Has experience and published works with viral genomic survillance in <em>Theobroma cacao</em> public data to screening new viral putative sequences in RNA-Seq libraries in public databases.</p></li>
-<li><p>Worked with identification of PRRs and NLRs genes in <em>Theobroma cacao</em> RNA-Seq public data to screen expressed genes in different tissues, genotypes and condition (inoculated with <em>P. megakarya</em>) and performs differential gene expression analysis between these groups.</p></li>
-</ul>
-</section>
-<section id="bachelors-degree-2018---2022" class="level2">
-<h2 class="anchored" data-anchor-id="bachelors-degree-2018---2022">Bachelor’s Degree (2018 - 2022)</h2>
-<p><strong>Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA</strong></p>
-<p><em>Bachelor in Interdisciplinary Sciences</em></p>
-<ul>
-<li>Worked with chemodiversity of the native populations of Atlantic forest plant <em>Schinus terebinthifolia</em> Raddi.</li>
-</ul>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="YmlvaW5mb3JtYXRpY3MlMkN0dXRvcmlhbCUyQ1Nhbmdlcg==" data-listing-date-sort="1765764562000" data-listing-file-modified-sort="1765764562002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001">
+<a href="./posts/seq_sanger/seq_sanger.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/seq_sanger/thumb.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Processando dados de sequenciamento Sanger
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmlvaW5mb3JtYXRpY3M='); return false;">bioinformatics</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dHV0b3JpYWw='); return false;">tutorial</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2FuZ2Vy'); return false;">Sanger</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Atividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof.&nbsp;Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Gabriel Rodrigues
+</div>
+<div class="listing-date">
+Dec 14, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
