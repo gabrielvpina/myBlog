@@ -4,5 +4,9 @@
     "items": [
       "/posts/seq_sanger/seq_sanger.html"
     ]
+  },
+  {
+    "listing": "/papers.html",
+    "items": []
   }
 ]

@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -68,12 +70,70 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./production.html" aria-current="page"> 
+    <a class="nav-link active" href="./papers.html" aria-current="page"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
@@ -134,7 +194,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="QW50aW1pY3JvYmlhbCUyMEFjdGl2aXR5">Antimicrobial Activity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QXJ0aHJvcG9k">Arthropod <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmlvaW5mb3JtYXRpY3M=">Bioinformatics <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q29jb2E=">Cocoa <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWlSTkFz">miRNAs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGlwZWxpbmU=">Pipeline <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Vmlyb2xvZ3k=">Virology <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -157,50 +218,161 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preprints" class="level1">
-<h1>Preprints</h1>
-<section id="viralquest-a-user-friendly-interactive-pipeline-for-viral-sequences-analysis-and-curation" class="level3">
-<h3 class="anchored" data-anchor-id="viralquest-a-user-friendly-interactive-pipeline-for-viral-sequences-analysis-and-curation">ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis and curation</h3>
-<p>2025-08-12 | <strong>Preprint</strong></p>
-<p>DOI: <a href="https://doi.org/10.1101/2025.08.10.669577">10.1101/2025.08.10.669577</a></p>
-<p>Contributors: <strong>Gabriel Victor Pina Rodrigues</strong>; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar</p>
-</section>
-</section>
-<section id="published-works" class="level1">
-<h1>Published works</h1>
-<section id="insights-into-mirnas-of-the-stingless-bee-melipona-quadrifasciata" class="level3">
-<h3 class="anchored" data-anchor-id="insights-into-mirnas-of-the-stingless-bee-melipona-quadrifasciata">Insights into miRNAs of the Stingless Bee <em>Melipona quadrifasciata</em></h3>
-<p><strong>Non-Coding RNA</strong></p>
-<p>2025-06-19 | Journal article</p>
-<p>DOI: <a href="https://doi.org/10.3390/ncrna11030048">10.3390/ncrna11030048</a></p>
-<p>Contributors: Dalliane Oliveira Soares; Lucas Yago Melo Ferreira; <strong>Gabriel Victor Pina Rodrigues</strong>; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição; Tatyana Chagas Moura; Isaque João da Silva de Faria; Roenick Proveti Olmo; Weyder Cristiano Santana <em>et al.</em></p>
-</section>
-<section id="theobroma-cacao-virome-exploring-public-rna-seq-data-for-viral-discovery-and-surveillance" class="level3">
-<h3 class="anchored" data-anchor-id="theobroma-cacao-virome-exploring-public-rna-seq-data-for-viral-discovery-and-surveillance"><em>Theobroma cacao</em> Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance</h3>
-<p><strong>Viruses</strong></p>
-<p>2025-04 | Journal article | Author</p>
-<p>DOI: <a href="https://www.mdpi.com/1999-4915/17/5/624">10.3390/v17050624</a></p>
-<p>Contributors: <strong>Gabriel Victor Pina Rodrigues</strong>; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães Rocha Aguiar</p>
-</section>
-<section id="polymyxin-combined-with-ocimum-gratissimum-essential-oil-one-alternative-strategy-for-combating-polymyxin-resistant-klebsiella-pneumoniae" class="level3">
-<h3 class="anchored" data-anchor-id="polymyxin-combined-with-ocimum-gratissimum-essential-oil-one-alternative-strategy-for-combating-polymyxin-resistant-klebsiella-pneumoniae">Polymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae</h3>
-<p><strong>Journal of Medical Microbiology</strong></p>
-<p>2024-09-18 | Journal article</p>
-<p>DOI: 10.1099/jmm.0.001891</p>
-<p>Contributors: Andressa Leite Ferraz de Melo; Luana Rossato; Jannaína Velasques; Virginia Lopes de Sousa; <strong>Gabriel Victor Pina Rodrigues</strong>; Cláudia Andrea Lima Cardoso; Julia Pimentel Arantes; Bruno Fernandes Lima; Simone Simionatto</p>
-</section>
-<section id="the-virome-of-cocoa-fermentation-associated-microorganisms" class="level3">
-<h3 class="anchored" data-anchor-id="the-virome-of-cocoa-fermentation-associated-microorganisms">The Virome of Cocoa Fermentation-Associated Microorganisms</h3>
-<p><strong>Viruses</strong></p>
-<p>2024-07-31 | Journal article</p>
-<p>DOI: <a href="https://doi.org/10.3390/v16081226">10.3390/v16081226</a></p>
-<p>Contributors: João Pedro Nunes Santos; <strong>Gabriel Victor Pina Rodrigues</strong>; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno Santos Florêncio; Aijalon Brito da Silva Junior; Paulo Eduardo Ambrósio; Carlos Priminho Pirovani et al.</p>
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="Vmlyb2xvZ3klMkNCaW9pbmZvcm1hdGljcyUyQ1BpcGVsaW5l" data-listing-date-sort="1754967600000">
+<a href="https://doi.org/10.1101/2025.08.10.669577" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="papers_thumbs/viralquest.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Vmlyb2xvZ3k='); return false;">Virology</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmlvaW5mb3JtYXRpY3M='); return false;">Bioinformatics</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UGlwZWxpbmU='); return false;">Pipeline</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p><strong>Gabriel Victor Pina Rodrigues</strong>; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Aug 12, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="QXJ0aHJvcG9kJTJDbWlSTkFzJTJDQmlvaW5mb3JtYXRpY3M=" data-listing-date-sort="1750302000000">
+<a href="https://doi.org/10.3390/ncrna11030048" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="papers_thumbs/mirna_mquad.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Insights into miRNAs of the Stingless Bee <em>Melipona quadrifasciata</em>
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXJ0aHJvcG9k'); return false;">Arthropod</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWlSTkFz'); return false;">miRNAs</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmlvaW5mb3JtYXRpY3M='); return false;">Bioinformatics</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Dalliane Oliveira Soares; Lucas Yago Melo Ferreira; <strong>Gabriel Victor Pina Rodrigues</strong>; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição;…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jun 19, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Vmlyb2xvZ3klMkNDb2NvYSUyQ0Jpb2luZm9ybWF0aWNz" data-listing-date-sort="1743476400000">
+<a href="https://www.mdpi.com/1999-4915/17/5/624" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="papers_thumbs/cocoa_virus.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<em>Theobroma cacao</em> Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Vmlyb2xvZ3k='); return false;">Virology</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29jb2E='); return false;">Cocoa</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmlvaW5mb3JtYXRpY3M='); return false;">Bioinformatics</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p><strong>Gabriel Victor Pina Rodrigues</strong>; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Apr 1, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="QW50aW1pY3JvYmlhbCUyMEFjdGl2aXR5" data-listing-date-sort="1726628400000">
+<a href="https://doi.org/10.1099/jmm.0.001891" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="papers_thumbs/janna.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Polymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QW50aW1pY3JvYmlhbCUyMEFjdGl2aXR5'); return false;">Antimicrobial Activity</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Andressa Leite Ferraz de Melo, Luana Rossato, Jannaína Velasques, Virginia Lopes de Sousa, <strong>Gabriel Victor Pina Rodrigues</strong>, Cláudia Andrea Lima Cardoso, Julia Pimentel…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Sep 18, 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Vmlyb2xvZ3klMkNDb2NvYSUyQ0Jpb2luZm9ybWF0aWNz" data-listing-date-sort="1722394800000">
+<a href="https://doi.org/10.3390/v16081226" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="papers_thumbs/ferment.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The Virome of Cocoa Fermentation-Associated Microorganisms
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Vmlyb2xvZ3k='); return false;">Virology</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29jb2E='); return false;">Cocoa</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmlvaW5mb3JtYXRpY3M='); return false;">Bioinformatics</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>João Pedro Nunes Santos; <strong>Gabriel Victor Pina Rodrigues</strong>; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 31, 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
