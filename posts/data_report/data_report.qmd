@@ -2,7 +2,7 @@
 title: Explorando Dados com R
 
 image: "thumb.png"
-categories: [data science, tutorial, R]
+categories: [Data-Science, Tutorial, R]
 
 date: 2025-10-30
 date-format: "long"

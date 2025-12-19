@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -194,9 +194,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QmlvaW5mb3JtYXRpY3M=">Bioinformatics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YS1TY2llbmNl">Data-Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2FuZ2Vy">Sanger <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHV0b3JpYWw=">Tutorial <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -225,7 +225,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="ZGF0YSUyMHNjaWVuY2UlMkN0dXRvcmlhbCUyQ1I=" data-listing-date-sort="1761793200000" data-listing-file-modified-sort="1766111606476" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3800">
+<div class="g-col-1" data-index="0" data-categories="RGF0YS1TY2llbmNlJTJDVHV0b3JpYWwlMkNS" data-listing-date-sort="1761793200000" data-listing-file-modified-sort="1766112527841" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3800">
 <a href="./posts/data_report/data_report.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -237,9 +237,9 @@ Explorando Dados com R
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YSUyMHNjaWVuY2U='); return false;">data science</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YS1TY2llbmNl'); return false;">Data-Science</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('dHV0b3JpYWw='); return false;">tutorial</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VHV0b3JpYWw='); return false;">Tutorial</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
 
@@ -258,7 +258,7 @@ Oct 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="YmlvaW5mb3JtYXRpY3MlMkN0dXRvcmlhbCUyQ1Nhbmdlcg==" data-listing-date-sort="1762311600000" data-listing-file-modified-sort="1766111464971" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001">
+<div class="g-col-1" data-index="1" data-categories="QmlvaW5mb3JtYXRpY3MlMkNUdXRvcmlhbCUyQ1Nhbmdlcg==" data-listing-date-sort="1762311600000" data-listing-file-modified-sort="1766112551715" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001">
 <a href="./posts/seq_sanger/seq_sanger.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -270,9 +270,9 @@ Processando dados de sequenciamento Sanger
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('YmlvaW5mb3JtYXRpY3M='); return false;">bioinformatics</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmlvaW5mb3JtYXRpY3M='); return false;">Bioinformatics</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('dHV0b3JpYWw='); return false;">tutorial</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VHV0b3JpYWw='); return false;">Tutorial</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('U2FuZ2Vy'); return false;">Sanger</div>
 

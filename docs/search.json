@@ -4,7 +4,7 @@
     "href": "posts.html",
     "title": "Posts",
     "section": "",
-    "text": "Explorando Dados com R\n\n\n\ndata science\n\ntutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nGabriel Rodrigues\n\n\nOct 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nbioinformatics\n\ntutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nGabriel Rodrigues\n\n\nNov 5, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Explorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nGabriel Rodrigues\n\n\nOct 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nGabriel Rodrigues\n\n\nNov 5, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/data_report/data_report.html",
@@ -95,14 +95,14 @@
     "href": "index.html",
     "title": "Gabriel Rodrigues",
     "section": "",
-    "text": "PhD Student in Genetics and Molecular Biology, with an emphasis on Bioinformatics. I am currently developing pipelines for RNAseq data to study plant innate immune systems and viral diversity from RNA samples.\n\n\nUniversidade Estadual de Santa Cruz, Brazil - Ilhéus MSc. in Genetics and Molecular Biology\nUniversidade Federal do Sul da Bahia, Brazil - Itabuna Bachelor in Interdisciplinary Sciences\n\n\n\nHard Skills: Python | R | Bash | Linux | Conda and Bioconda | Docker | Quarto | Shiny\nKnow-How: Biostatistics | NGS Data | Pipeline Devlopment | Differential Gene Expression | Dashboards | Biological Databases"
+    "text": "PhD Student in Genetics and Molecular Biology, with an emphasis on Bioinformatics. I am currently developing pipelines for RNAseq data to study plant innate immune systems and viral diversity from RNA samples.\n\n\nMSc. in Genetics and Molecular Biology\nUniversidade Estadual de Santa Cruz, Brazil - Ilhéus\nBachelor in Interdisciplinary Sciences\nUniversidade Federal do Sul da Bahia, Brazil - Itabuna\n\n\n\nHard Skills: Python | R | Bash | Linux | Conda and Bioconda | Docker | Quarto | Shiny\nKnow-How: Biostatistics | NGS Data | Pipeline Devlopment | Differential Gene Expression | Dashboards | Biological Databases"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Gabriel Rodrigues",
     "section": "",
-    "text": "Universidade Estadual de Santa Cruz, Brazil - Ilhéus MSc. in Genetics and Molecular Biology\nUniversidade Federal do Sul da Bahia, Brazil - Itabuna Bachelor in Interdisciplinary Sciences"
+    "text": "MSc. in Genetics and Molecular Biology\nUniversidade Estadual de Santa Cruz, Brazil - Ilhéus\nBachelor in Interdisciplinary Sciences\nUniversidade Federal do Sul da Bahia, Brazil - Itabuna"
   },
   {
     "objectID": "index.html#experience",

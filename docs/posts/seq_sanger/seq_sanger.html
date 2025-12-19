@@ -3987,8 +3987,8 @@ font-family: inherit;
 <div class="quarto-title">
 <h1 class="title">Processando dados de sequenciamento Sanger</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">bioinformatics</div>
-    <div class="quarto-category">tutorial</div>
+    <div class="quarto-category">Bioinformatics</div>
+    <div class="quarto-category">Tutorial</div>
     <div class="quarto-category">Sanger</div>
   </div>
   </div>
@@ -4063,7 +4063,7 @@ font-family: inherit;
 <h2 data-number="2.2" class="anchored" data-anchor-id="conversão-de-.ab1-para-.fastq"><span class="header-section-number">2.2</span> Conversão de .ab1 para .fastq</h2>
 <p>Como não será possível trabalhar diretamente com o software <em>BioEdit</em>, será necessário realizar a conversão dos arquivos arquivos <em>.ab1</em> para o formato <em>.fastq</em>, formato padrão dos dados brutos de sequenciadores de nova gereação, como os da plataforma <em>Illumina</em>.</p>
 <p>Para realizar essa conversão, foi utilizada a biblioteca BioPython (suportada pela linguagem de programação Python) para criar o arquivo <code>abi2fastq.py</code> com o seguinte código:</p>
-<div id="fe3b46c7" class="cell" data-execution_count="1">
+<div id="0b64a39e" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importando a biblioteca BioPython</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
@@ -4131,7 +4131,7 @@ _______W__W_________________OO______WPOO_L_[[[[[[[[[U[[[[[[[[[[W
 <section id="conversão-de-fastq-para-fasta" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="conversão-de-fastq-para-fasta"><span class="header-section-number">2.5</span> Conversão de FASTQ para FASTA</h2>
 <p>Após a trimagem das sequências e remoção de bases de não definidas, os arquivos <em>FASTQ</em> foram comvertidos para o formato <em>FASTA</em> através da biblioteca <strong>BioPython</strong>, seguindo a mesma lógica da conversão dos arquivos <em>.ab1</em>:</p>
-<div id="8efdfe0c" class="cell" data-execution_count="2">
+<div id="85a721a3" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importando a biblioteca BioPython</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
