@@ -2,8 +2,10 @@
 title: "Posts"
 
 listing:
+  categories: true
   type: grid
   fields: [image, date, title, description, categories, author]
   contents:
     - "posts/seq_sanger/*.qmd"
+    - "posts/data_report/*.qmd"
 ---

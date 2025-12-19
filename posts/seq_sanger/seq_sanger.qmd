@@ -4,7 +4,7 @@ title: Processando dados de sequenciamento Sanger
 image: "thumb.png"
 categories: [bioinformatics, tutorial, Sanger]
 
-date: "last-modified"
+date: "2025-11-05"
 date-format: "long"
 
 author: 

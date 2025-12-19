@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/data_report/data_report.html",
       "/posts/seq_sanger/seq_sanger.html"
     ]
   },

@@ -4,7 +4,119 @@
     "href": "posts.html",
     "title": "Posts",
     "section": "",
-    "text": "Processando dados de sequenciamento Sanger\n\n\n\nbioinformatics\n\ntutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nGabriel Rodrigues\n\n\nDec 14, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Explorando Dados com R\n\n\n\ndata science\n\ntutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nGabriel Rodrigues\n\n\nOct 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nbioinformatics\n\ntutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nGabriel Rodrigues\n\n\nNov 5, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html",
+    "href": "posts/data_report/data_report.html",
+    "title": "Explorando Dados com R",
+    "section": "",
+    "text": "Esse relatório é complementar à Atividade Prática 06, realizada dia 28 de Outubro em sala de aula. O relatório possui o intuito de representar como um relatório de dados formal deve ser estruturado, juntamento com as operações de processamento de dados e códigos no R.\n\n\nOs dados utilizados aqui serão vindos da tabela world-data-2023.csv, que representa um compilado abrangente de indicadores globais por país, referente ao ano de 2023.\nAs principais categorias de dados incluem:\n\nDemografia e Geografia: Informações sobre População, Densidade (P/Km2), Área Terrestre (Km2), População Urbana, Taxa de Natalidade, Taxa de Fertilidade e Expectativa de Vida.\nEconomia e Finanças: Dados vitais como Produto Interno Bruto (PIB), Índice de Preços ao Consumidor (IPC e sua variação), Código da Moeda, Salário Mínimo, Receita Tributária (%), Taxa de Imposto Total, e o Preço da Gasolina.\nSaúde e Educação: Indicadores sociais cruciais, incluindo Mortalidade Infantil e Materna, proporção de Médicos por Mil, Despesas de Saúde do bolso próprio, e as taxas de matrícula bruta nos ensinos primário e superior.\nMeio Ambiente e Recursos: Métricas ambientais como as Emissões de CO2​ e a porcentagem de Terra Agrícola e Área Florestal.\nForça de Trabalho e Segurança: Informações sobre a participação da Força de Trabalho, Taxa de Desemprego e o Tamanho das Forças Armadas.\n\nEm resumo, é um dataset de múltiplas facetas destinado a fornecer um perfil detalhado e estatístico de cada país."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#resumo-dos-dados",
+    "href": "posts/data_report/data_report.html#resumo-dos-dados",
+    "title": "Explorando Dados com R",
+    "section": "",
+    "text": "Os dados utilizados aqui serão vindos da tabela world-data-2023.csv, que representa um compilado abrangente de indicadores globais por país, referente ao ano de 2023.\nAs principais categorias de dados incluem:\n\nDemografia e Geografia: Informações sobre População, Densidade (P/Km2), Área Terrestre (Km2), População Urbana, Taxa de Natalidade, Taxa de Fertilidade e Expectativa de Vida.\nEconomia e Finanças: Dados vitais como Produto Interno Bruto (PIB), Índice de Preços ao Consumidor (IPC e sua variação), Código da Moeda, Salário Mínimo, Receita Tributária (%), Taxa de Imposto Total, e o Preço da Gasolina.\nSaúde e Educação: Indicadores sociais cruciais, incluindo Mortalidade Infantil e Materna, proporção de Médicos por Mil, Despesas de Saúde do bolso próprio, e as taxas de matrícula bruta nos ensinos primário e superior.\nMeio Ambiente e Recursos: Métricas ambientais como as Emissões de CO2​ e a porcentagem de Terra Agrícola e Área Florestal.\nForça de Trabalho e Segurança: Informações sobre a participação da Força de Trabalho, Taxa de Desemprego e o Tamanho das Forças Armadas.\n\nEm resumo, é um dataset de múltiplas facetas destinado a fornecer um perfil detalhado e estatístico de cada país."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#primeiras-impressões",
+    "href": "posts/data_report/data_report.html#primeiras-impressões",
+    "title": "Explorando Dados com R",
+    "section": "2.1 Primeiras impressões",
+    "text": "2.1 Primeiras impressões\nCom o resumo dos dados em mãos, pode-se observar que diversas colunas que deveriam ser numéricas estão sendo lidas como strings. As principais causas são:\n\nUso de vírgula para representar decimais, enquanto o R utiliza pontos\nCaracteres associados à porcentagens (ex: 23.12%)\nCaracteres associados à valores monetários (“$”)\n\nOutra coisa para se atentar são os nomes das colunas, que antes continham espaços e símbolos na tabela original e agora tiveram modificações automáticas devido à função de importação do R.\n\n# nomes vindos da importação\ncolnames(df)\n\n [1] \"Country\"                                  \n [2] \"Density..P.Km2.\"                          \n [3] \"Abbreviation\"                             \n [4] \"Agricultural.Land....\"                    \n [5] \"Land.Area.Km2.\"                           \n [6] \"Armed.Forces.size\"                        \n [7] \"Birth.Rate\"                               \n [8] \"Calling.Code\"                             \n [9] \"Capital.Major.City\"                       \n[10] \"Co2.Emissions\"                            \n[11] \"CPI\"                                      \n[12] \"CPI.Change....\"                           \n[13] \"Currency.Code\"                            \n[14] \"Fertility.Rate\"                           \n[15] \"Forested.Area....\"                        \n[16] \"Gasoline.Price\"                           \n[17] \"GDP\"                                      \n[18] \"Gross.primary.education.enrollment....\"   \n[19] \"Gross.tertiary.education.enrollment....\"  \n[20] \"Infant.mortality\"                         \n[21] \"Largest.city\"                             \n[22] \"Life.expectancy\"                          \n[23] \"Maternal.mortality.ratio\"                 \n[24] \"Minimum.wage\"                             \n[25] \"Official.language\"                        \n[26] \"Out.of.pocket.health.expenditure\"         \n[27] \"Physicians.per.thousand\"                  \n[28] \"Population\"                               \n[29] \"Population..Labor.force.participation....\"\n[30] \"Tax.revenue....\"                          \n[31] \"Total.tax.rate\"                           \n[32] \"Unemployment.rate\"                        \n[33] \"Urban_population\"                         \n[34] \"Latitude\"                                 \n[35] \"Longitude\"                                \n\n\nVamos checar agora o total de valores vazios NAs no dataset:\n\n# a função table() conta categorias do vetor gerado pela função is.na()\ntable(is.na(df))\n\n\nFALSE  TRUE \n 6774    51 \n\n\nSão 51 itens vazios em um total de 6774 itens totais da tabela, isso representa aproximadamente 0.75% dos valores totais no nosso dataset."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#corrigir-colunas-lidas-como-string",
+    "href": "posts/data_report/data_report.html#corrigir-colunas-lidas-como-string",
+    "title": "Explorando Dados com R",
+    "section": "3.1 Corrigir colunas lidas como string",
+    "text": "3.1 Corrigir colunas lidas como string\n\n3.1.1 Colunas com porcentagem (%)\nPara corrigir as colunas que possuem um caractere % em seus itens, utiliza-se uma substituição por um item vazio (““). Para isso emprega-se a função gsub() para substituir \"%\" -&gt; \"\". Normalmente a função gsub() funciona individualmente para cada coluna, por isso deve-se utilizar a função lapply() associada a ela, de forma que gsub() funcione em um loop para as colunas selecionadas.\n\n# colunas com caractere de porcentagem (%)\ncolunas_erradas &lt;- c(\"TaxaDesemprego\", \"TaxaImpostoTotal\", \"ReceitaFiscalPercentual\", \"PopulacaoForcaTrabalhoPercentual\", \"GastoSaudeProprioBolso\", \"MatriculaSuperiorBrutaPercentual\", \"MatriculaPrimariaBrutaPercentual\", \"AreaFlorestadaPercentual\", \"MudancaIPCPercentual\", \"TerraAgriculturaPercentual\")\n\n# aplicando gsub nas colunas escolhidas\ndf[colunas_erradas] &lt;- lapply(df[colunas_erradas], gsub, pattern = \"%\", replacement = \"\") # trocar porcentagem por vazio\n\n# transformando as colunas em numericas\ndf[colunas_erradas] &lt;- lapply(df[colunas_erradas], as.numeric)\n\n\n\n3.1.2 Colunas com cifrão ($)\nCom isso resolvemos as colunas com %, agora vamos aplicar a mesma lógica para colunas com cifrão $. Entretanto 0 cifrão é um metacaractere em expressões regulares que geralmente indica o fim da string. Para tratar o $ como um caractere literal que você deseja remover, ele precisa ser “escapado” com barras invertidas duplas \\\\$.\n\ncolunas_cifrao &lt;- c(\"SalarioMinimo\", \"PrecoGasolina\")\n\ndf[colunas_cifrao] &lt;- lapply(df[colunas_cifrao], gsub, pattern = \"\\\\$\", replacement = \"\")\n\ndf[colunas_cifrao] &lt;- lapply(df[colunas_cifrao], as.numeric)\n\n\n\n3.1.3 Colunas com vírgula\nA partir da substituição do cifrão nas colunas, é possível realizar a substituição das vírgulas nas colunas e convertê-las para colunas numéricas. Podemos checar com head(df) os nossos dados e selecionar as colunas erradas.\nÉ necessário fazer uma diferença, pois em colunas como PopulacaoUrbana, Populacao, PIB e EmissoesCO2 existe um padrão diferente de notação, onde as vírgulas estão somente para diferenciar visualmente os milhates das centenas e das dezenas, e não uma representação decimal.\n\ncolunas_cifrao &lt;- c(\"PIB\")\n\ndf[colunas_cifrao] &lt;- lapply(df[colunas_cifrao], gsub, pattern = \"\\\\$\", replacement = \"\")\n\ncolunas_virg &lt;- c(\"PopulacaoUrbana\", \"Populacao\", \"PIB\", \"EmissoesCO2\", \"AreaTerrestreKm2\", \"Densidade\", \"TamanhoForcasArmadas\")\n\ndf[colunas_virg] &lt;- lapply(df[colunas_virg], gsub, pattern = \",\", replacement = \"\")\n\ndf[colunas_virg] &lt;- lapply(df[colunas_virg], as.numeric)\n\nAgora todas as colunas estão formatadas para as análises estatísticas e gráficos."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#criação-dos-plots",
+    "href": "posts/data_report/data_report.html#criação-dos-plots",
+    "title": "Explorando Dados com R",
+    "section": "7.1 Criação dos Plots",
+    "text": "7.1 Criação dos Plots"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#variáveis-sócio-econômicas-1",
+    "href": "posts/data_report/data_report.html#variáveis-sócio-econômicas-1",
+    "title": "Explorando Dados com R",
+    "section": "7.2 Variáveis Sócio-Econômicas",
+    "text": "7.2 Variáveis Sócio-Econômicas\nColunas que envolvem as informações sobre saúde pública, economia e geografia da populção.\n\nsoc_eco &lt;- c(\n    \"TaxaNatalidade\",\n    \"TaxaFertilidade\",\n    \"ExpectativaVida\",\n    \"TaxaDesemprego\",\n    \"MortalidadeInfantil\",\n    \"TaxaImpostoTotal\",\n    \"SalarioMinimo\",\n    \"Densidade\"\n)\n\ndf_longo_indicadores %&gt;%\n    filter(Indicador %in% soc_eco) %&gt;%\n    ggplot(aes(x = Continent_Name, y = Valor, color = Indicador, fill=Indicador)) +\n    geom_boxplot(alpha=0.6) +\n    geom_jitter( alpha=0.6) +\n    facet_wrap(~ Indicador, scales = \"free\", ncol = 2) +\n    theme_minimal() +\n    theme(\n        axis.text.x = element_text(angle=45,hjust=1,vjust=1),\n        legend.position = \"top\"\n    )"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#variáveis-ambientais-1",
+    "href": "posts/data_report/data_report.html#variáveis-ambientais-1",
+    "title": "Explorando Dados com R",
+    "section": "7.3 Variáveis Ambientais",
+    "text": "7.3 Variáveis Ambientais\nParâmetros relacionados com as atividades agrícolas e florestais do ambiente.\n\namb &lt;- c(\n    \"TerraAgriculturaPercentual\",\n    \"AreaTerrestreKm2\",\n    \"EmissoesCO2\",\n    \"AreaFlorestadaPercentual\",\n    \"PopulacaoUrbana\"\n)\n\ndf_longo_indicadores %&gt;%\n    filter(Indicador %in% amb) %&gt;%\n    ggplot(aes(x = Continent_Name, y = Valor, color = Indicador, fill=Indicador)) +\n    geom_boxplot(alpha=0.6) +\n    geom_jitter( alpha=0.6) +\n    facet_wrap(~ Indicador, scales = \"free\", ncol = 2) +\n    theme_minimal() +\n    theme(\n        axis.text.x = element_text(angle=45,hjust=1,vjust=1),\n        legend.position = \"top\"\n    )"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#análise-de-variância-anova",
+    "href": "posts/data_report/data_report.html#análise-de-variância-anova",
+    "title": "Explorando Dados com R",
+    "section": "8.1 Análise de Variância (ANOVA)",
+    "text": "8.1 Análise de Variância (ANOVA)\nA partir dos resultados, seleciona-se as características que possuem uma distribuição seguindo a curva normal (PrecoGasolina e PopulacaoForcaTrabalhoPercentual).\n\n8.1.1 Preço da Gasolina\nModelo básico de ANOVA\nA função aov() do pacote básico do R é a responsável por fazer a análise de variância dos dados. Um modelo de ANOVA deve ser feito entre uma variável categórica, como Continent_Name (representando um grupo maior dos dados individuais) e uma variável numérica - nesse caso o preço da gasoline (PrecoGasolina).\nCriar subset somente com a coluna PrecoGasolina\n\ngas &lt;- df_longo_indicadores[df_longo_indicadores$Indicador == \"PrecoGasolina\", ]\n\nModelo ANOVA\n\n# Criar variável modelo para armazenar os dados da função aov()\nmodelo &lt;- aov(Valor ~ Continent_Name, data = gas)\n\n# Mostrar informações do modelo\nsummary(modelo)\n\n                Df Sum Sq Mean Sq F value  Pr(&gt;F)    \nContinent_Name   5  5.034  1.0069   9.361 6.7e-08 ***\nResiduals      171 18.394  0.1076                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n16 observations deleted due to missingness\n\n\nA linha aov(Valor ~ Continent_Name, data = gas) pode ser traduzida como: Realizar uma análise de variância com os valores numéricos da coluna Valor em fator das categorias presentes em Continent_Name, sendo todas essas colunas pertencentes ao dataset gas.\nO resultado da coluna Pr(&gt;F) representa o P-Valor da ANOVA, onde sua interpretação é que:\n\nQuando Pr(&gt;F) &gt; 0.05: Não há diferença entre as médias das categorias no valor escolhido\nQuando Pr(&gt;F) &lt; 0.05: Há diferença significativa entre as médias dos grupos analisados\n\nNo caso o P-Valor da variável modelo é de 6.7e-08, que representa um valor muito abaixo que 0.05, o que pode evidenciar uma diferença clara nas médias entre os grupos.\nUma das desvantagens da ANOVA é a falta de especificidade na análise, não evidenciando quais grupos diferem e qual o grau de diferença."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#testes-post-hoc-pós-teste",
+    "href": "posts/data_report/data_report.html#testes-post-hoc-pós-teste",
+    "title": "Explorando Dados com R",
+    "section": "8.2 Testes Post-Hoc (pós-teste)",
+    "text": "8.2 Testes Post-Hoc (pós-teste)\nO Teste de Tukey (Tukey’s Honestly Significant Difference - HSD) é uma ferramenta essencial que entra em ação após a realização de uma ANOVA que resultou ser estatisticamente significativa (p&lt;0.05).\nAs colunas mais importantes são:\n\ndiff (Diferença): A diferença média entre os dois grupos comparados.\nlwr e upr (Limites do Intervalo de Confiança): Os limites inferior e superior do intervalo de confiança para a diferença.\np adj (p-valor ajustado): Este é o valor que você deve usar para decidir se a diferença é significativa.\n\n\nteste_tukey &lt;- TukeyHSD(modelo)\n\n# Mostrar os resultados\nprint(teste_tukey)\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = Valor ~ Continent_Name, data = gas)\n\n$Continent_Name\n                                   diff          lwr          upr     p adj\nAsia-Africa                 -0.17674838 -0.372810112  0.019313350 0.1032280\nEurope-Africa                0.27393720  0.075732143  0.472142253 0.0013866\nNorth America-Africa         0.02682609 -0.226370156  0.280022330 0.9996396\nOceania-Africa               0.20996894 -0.173552102  0.593489991 0.6141519\nSouth America-Africa        -0.05134058 -0.357765203  0.255084043 0.9967065\nEurope-Asia                  0.45068558  0.253525978  0.647845180 0.0000000\nNorth America-Asia           0.20357447 -0.048804219  0.455953155 0.1898326\nOceania-Asia                 0.38671733  0.003735527  0.769699123 0.0463108\nSouth America-Asia           0.12540780 -0.180341629  0.431157232 0.8448253\nNorth America-Europe        -0.24711111 -0.501158436  0.006936214 0.0616820\nOceania-Europe              -0.06396825 -0.448051707  0.320115199 0.9967986\nSouth America-Europe        -0.32527778 -0.632406018 -0.018149538 0.0310231\nOceania-North America        0.18314286 -0.231999519  0.598285233 0.8000941\nSouth America-North America -0.07816667 -0.423349009  0.267015675 0.9866589\nSouth America-Oceania       -0.26130952 -0.710899231  0.188280184 0.5500147"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#plot-de-anova-com-ggstatsplot",
+    "href": "posts/data_report/data_report.html#plot-de-anova-com-ggstatsplot",
+    "title": "Explorando Dados com R",
+    "section": "8.3 Plot de ANOVA com ggstatsplot",
+    "text": "8.3 Plot de ANOVA com ggstatsplot\nO teste TukeyHSD() apresenta a diferença média entre todas as combinações de grupos na análise. Para se ter um plot gráfico com as informações tanto da ANOVA, quanto dos grrupos que tem uma diferença significativa em suas médias, usa-se o pacote ggstatsplot().\n\n# ANOVA com pacote ggstatsplot()\n# install.packages(\"ggstatsplot\")\n\nlibrary(ggstatsplot)\n\nggstatsplot::ggbetweenstats(gas, Continent_Name, Valor,  \ntitle = \"Distribuição do Preço da Gasolina por Continente (USD)\")\n\n\n\n\n\n\n\n\nÉ possível observar a diferença nas médias de cada continente, mas o ponto principal é o P-valor entre os grupos (os continentes). No caso da imagem, dois pares de continentes apresentaram um P-valor menor que 0.05, eles são as comparações dos testes entre cada grupo. Por isso os valores diferentes do que a ANOVA realizada em toda a coluna - como feita na variável modelo apresentada anteriormente.\nCriar subset e plot com a coluna PopulacaoForcaTrabalhoPercentual\n\n# Filtrar dataset\npopForc &lt;- df_longo_indicadores[df_longo_indicadores$Indicador == \"PopulacaoForcaTrabalhoPercentual\", ]\n\n# Criar plot com ggstatsplot()\nggstatsplot::ggbetweenstats(popForc, Continent_Name, Valor,  \ntitle = \"Distribuição da Força de Trabalho na População (%)\")\n\n\n\n\n\n\n\n\nNo caso da variável PopulacaoForcaTrabalhoPercentual, não houve diferença significativa nas médias dos continentes.\nAgora que as variáveis com distribuição normal nos dados foram analisadas com teste ANOVA, deve-se realizar os testes estatísticos não-paramétricos. Onde os dados selecionados não seguem a curva de Laplace-Gauss."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#teste-de-kruskal-wallis-no-r",
+    "href": "posts/data_report/data_report.html#teste-de-kruskal-wallis-no-r",
+    "title": "Explorando Dados com R",
+    "section": "9.1 Teste de Kruskal-Wallis no R",
+    "text": "9.1 Teste de Kruskal-Wallis no R\nO Teste de Kruskal-Wallis verifica se as distribuições (ou, mais precisamente, as medianas ou as classificações médias) dos grupos são as mesmas.\nHipótese de Teste:\n\nH0​ - (Hipótese Nula): As medianas (ou classificações médias) de todos os grupos são iguais.\nH1​ - (Hipótese Alternativa): Pelo menos uma mediana de grupo é diferente das outras.\n\n\n9.1.1 Código no R\nPara realizar essa análise, a função kruskal.test() no R, com a mesma sintaxe de fórmula da ANOVA (variável_dependente ~ variável_agrupadora).\n\n# Criar novo subset\nexp_vida &lt;- df_longo_indicadores[df_longo_indicadores$Indicador == \"ExpectativaVida\", ]\n\n# 2. Executar o Teste de Kruskal-Wallis\nteste_kruskal &lt;- kruskal.test(Valor ~ Continent_Name, data = exp_vida)\n\n# 3. Imprimir o resultado\nprint(teste_kruskal)\n\n\n    Kruskal-Wallis rank sum test\n\ndata:  Valor by Continent_Name\nKruskal-Wallis chi-squared = 102.94, df = 5, p-value &lt; 2.2e-16\n\n\n\n\n9.1.2 Interpretação dos resultados\nSe o p-valor (p-value) resultante for menor que 0.05, se rejeita a hipótese H0​. Isso significa que há uma diferença estatisticamente significativa entre as distribuições do Preço da Gasolina em pelo menos um continente.\nSe o p-valor for maior ou igual a 0.05, a hipótese H0 não é rejeitada​. Não há evidência de diferença significativa nas medianas"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#plot-de-dados-não-paramétricos-com-ggstatsplot",
+    "href": "posts/data_report/data_report.html#plot-de-dados-não-paramétricos-com-ggstatsplot",
+    "title": "Explorando Dados com R",
+    "section": "9.2 Plot de dados não-paramétricos com ggstatsplot",
+    "text": "9.2 Plot de dados não-paramétricos com ggstatsplot\nÉ possível realizar a análise de dados não-paramétricos diretamente pela função ggbetweenstats() do pacote ggstatsplot. Para isso utiliza-se o argumento type com a opção “nonparametric” (type=nonparametric).\n\n# Criar plot com ggstatsplot()\nggstatsplot::ggbetweenstats(exp_vida, Continent_Name, Valor,  \ntitle = \"Expectativa de Vida da População em Anos\", \ntype = \"nonparametric\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gabriel Rodrigues",
+    "section": "",
+    "text": "PhD Student in Genetics and Molecular Biology, with an emphasis on Bioinformatics. I am currently developing pipelines for RNAseq data to study plant innate immune systems and viral diversity from RNA samples.\n\n\nUniversidade Estadual de Santa Cruz, Brazil - Ilhéus MSc. in Genetics and Molecular Biology\nUniversidade Federal do Sul da Bahia, Brazil - Itabuna Bachelor in Interdisciplinary Sciences\n\n\n\nHard Skills: Python | R | Bash | Linux | Conda and Bioconda | Docker | Quarto | Shiny\nKnow-How: Biostatistics | NGS Data | Pipeline Devlopment | Differential Gene Expression | Dashboards | Biological Databases"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Gabriel Rodrigues",
+    "section": "",
+    "text": "Universidade Estadual de Santa Cruz, Brazil - Ilhéus MSc. in Genetics and Molecular Biology\nUniversidade Federal do Sul da Bahia, Brazil - Itabuna Bachelor in Interdisciplinary Sciences"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Gabriel Rodrigues",
+    "section": "",
+    "text": "Hard Skills: Python | R | Bash | Linux | Conda and Bioconda | Docker | Quarto | Shiny\nKnow-How: Biostatistics | NGS Data | Pipeline Devlopment | Differential Gene Expression | Dashboards | Biological Databases"
+  },
+  {
+    "objectID": "papers.html",
+    "href": "papers.html",
+    "title": "Papers",
+    "section": "",
+    "text": "ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis\n\n\n\nVirology\n\nBioinformatics\n\nPipeline\n\n\n\nGabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar\n\n\n\nAug 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights into miRNAs of the Stingless Bee Melipona quadrifasciata\n\n\n\nArthropod\n\nmiRNAs\n\nBioinformatics\n\n\n\nDalliane Oliveira Soares; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição;…\n\n\n\nJun 19, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheobroma cacao Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nGabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães…\n\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae\n\n\n\nAntimicrobial Activity\n\n\n\nAndressa Leite Ferraz de Melo, Luana Rossato, Jannaína Velasques, Virginia Lopes de Sousa, Gabriel Victor Pina Rodrigues, Cláudia Andrea Lima Cardoso, Julia Pimentel…\n\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Virome of Cocoa Fermentation-Associated Microorganisms\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nJoão Pedro Nunes Santos; Gabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno…\n\n\n\nJul 31, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -33,34 +145,6 @@
     "title": "About",
     "section": "Bachelor’s Degree (2018 - 2022)",
     "text": "Bachelor’s Degree (2018 - 2022)\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\n\nWorked with chemodiversity of the native populations of Atlantic forest plant Schinus terebinthifolia Raddi."
-  },
-  {
-    "objectID": "papers.html",
-    "href": "papers.html",
-    "title": "Papers",
-    "section": "",
-    "text": "ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis\n\n\n\nVirology\n\nBioinformatics\n\nPipeline\n\n\n\nGabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar\n\n\n\nAug 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights into miRNAs of the Stingless Bee Melipona quadrifasciata\n\n\n\nArthropod\n\nmiRNAs\n\nBioinformatics\n\n\n\nDalliane Oliveira Soares; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição;…\n\n\n\nJun 19, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheobroma cacao Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nGabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães…\n\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae\n\n\n\nAntimicrobial Activity\n\n\n\nAndressa Leite Ferraz de Melo, Luana Rossato, Jannaína Velasques, Virginia Lopes de Sousa, Gabriel Victor Pina Rodrigues, Cláudia Andrea Lima Cardoso, Julia Pimentel…\n\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Virome of Cocoa Fermentation-Associated Microorganisms\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nJoão Pedro Nunes Santos; Gabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno…\n\n\n\nJul 31, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Gabriel Rodrigues",
-    "section": "",
-    "text": "PhD Student in Genetics and Molecular Biology, with an emphasis on Bioinformatics. I am currently developing pipelines for RNAseq data to study plant innate immune systems and viral diversity from RNA samples.\n\n\nUniversidade Estadual de Santa Cruz, Brazil - Ilhéus, Brazil MSc. in Genetics and Molecular Biology\nUniversidade Federal do Sul da Bahia, Brazil - Itabuna, Brazil Bachelor in Interdisciplinary Sciences\n\n\n\nHard Skills: Python | R | Bash | Linux | Conda and Bioconda | Docker | Quarto | Shiny\nKnow-How: Biostatistics | NGS Data | Pipeline Devlopment | Differential Gene Expression | Dashboards | Biological Databases"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Gabriel Rodrigues",
-    "section": "",
-    "text": "Universidade Estadual de Santa Cruz, Brazil - Ilhéus, Brazil MSc. in Genetics and Molecular Biology\nUniversidade Federal do Sul da Bahia, Brazil - Itabuna, Brazil Bachelor in Interdisciplinary Sciences"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Gabriel Rodrigues",
-    "section": "",
-    "text": "Hard Skills: Python | R | Bash | Linux | Conda and Bioconda | Docker | Quarto | Shiny\nKnow-How: Biostatistics | NGS Data | Pipeline Devlopment | Differential Gene Expression | Dashboards | Biological Databases"
   },
   {
     "objectID": "posts/seq_sanger/seq_sanger.html",
