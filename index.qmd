@@ -38,6 +38,12 @@ Universidade Federal do Sul da Bahia, Brazil - Itabuna
 
 ## Experience
 
-**Hard Skills:** Python | R | Bash | Linux | Conda and Bioconda | Docker | Quarto | Shiny
+**Hard Skills:**  
+- Python, R and Bash   
+- Linux, Bioconda and Docker   
+- Quarto and Shiny
 
-**Know-How**: Biostatistics | NGS Data | Pipeline Devlopment | Differential Gene Expression | Dashboards | Biological Databases
+**Know-How:**  
+- Biostatistics, NGS Data and Pipeline Devlopment  
+- Genomics and Transcriptomics  
+- Dashboards and Biological Databases

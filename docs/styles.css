@@ -1,1 +1,23 @@
 /* css styles */
+
+/* Importando a fonte local */
+@font-face {
+  font-family: 'Cairo';
+  src: url('fonts/Cairo/Cairo.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Aplicando aos títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+}   
+
+/* Aplicar à marca/título do site na esquerda */
+.navbar-brand, 
+/* Aplicar aos itens de menu e links */
+.nav-link, 
+/* Aplicar a possíveis menus dropdown */
+.dropdown-item {
+  font-family: 'Cairo', sans-serif !important;
+}

@@ -5,7 +5,8 @@ project:
 website:
   title: "Gabriel Rodrigues"
   navbar:
-    left:
+    background: "#abc9db" 
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
@@ -27,6 +28,11 @@ format:
       - brand
     css: styles.css
     toc: true
+    resources: 
+      - fonts/
+
+execute:
+  freeze: auto 
 
 
 
