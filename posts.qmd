@@ -8,4 +8,5 @@ listing:
   contents:
     - "posts/seq_sanger/*.qmd"
     - "posts/data_report/*.qmd"
+    - "posts/decision_tree_basic/*.qmd"
 ---
