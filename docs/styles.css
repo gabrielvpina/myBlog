@@ -21,3 +21,27 @@ h1, h2, h3, h4, h5, h6 {
 .dropdown-item {
   font-family: 'Cairo', sans-serif !important;
 }
+
+
+
+
+/* Customização dos Cards na Listagem */
+.card {
+  border-radius: 15px; /* Arredonda os cantos do card */
+  border: none;        /* Remove a borda fina padrão se desejar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona a sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a animação */
+  overflow: hidden;    /* Garante que a imagem do topo também siga o arredondamento */
+}
+
+/* Efeito opcional: o card "levanta" quando você passa o mouse */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Arredondar a imagem dentro do card */
+.card-img-top, .thumbnail-image {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
